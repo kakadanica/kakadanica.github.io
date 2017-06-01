@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[如何使用Git生成并配置SSH密钥]]></title>
+    <url>%2F2017%2F06%2F01%2F%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Git%E7%94%9F%E6%88%90%E5%B9%B6%E9%85%8D%E7%BD%AESSH%E5%AF%86%E9%92%A5%2F</url>
+    <content type="text"><![CDATA[前提安装git到本地，能在cmd中使用git命令行 步骤1.设置全局用户名和邮箱git config –global user.name “kakadanica”git config –global user.email “kakadanica.gmail.com”2.生成SSH密钥ssh-keygen -t rsa -C “kakadnaica@gmail.com”如果你之前有生成过，控制台会提示你already exist，并给你打印出密钥的地址，建议删除后重新生成。如果你之前未生成过，直接敲三个回车，密码为空，将会提示你生成成功并显示例如：Your identification has been saved in /c/Users/E450/.ssh/id_rsa.Your public key has been saved in /c/Users/E450/.ssh/id_rsa.pub.The key fingerprint is:3.添加密钥到github上找到id_rsa.pub文件，使用记事本打开，复制内容。登录GitHub，到https://github.com/settings/keys该页面中，新建new SSH Key。输入任意Title，将刚刚复制的内容粘贴到key中，保存提交。 结果在cmd中执行ssh git@github.com命令操作Are you sure you want to continue connecting (yes/no)? yesWarning: Permanently added ‘github.com,192.30.255.112’ (RSA) to the list of known hosts.PTY allocation request failed on channel 0Hi kakadanica! You’ve successfully authenticated, but GitHub does not provide shell access.Connection to github.com closed.如上，表示设置成功！]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[如何在cmd中执行git命令行操作]]></title>
+    <url>%2F2017%2F06%2F01%2F%E5%A6%82%E4%BD%95%E5%9C%A8cmd%E4%B8%AD%E6%89%A7%E8%A1%8Cgit%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%2F</url>
+    <content type="text"><![CDATA[此情况发生场景安装git时未勾选Windows Explorer integration,在需要操作git命令行时，找不到操作面板 解决方案：配置环境变量1) 新建系统变量 GIT_HOME:[git安装地址（例如：D:\Program Files\Git)]2) 编辑Path,新建“%GIT_HOME%\usr\bin”和“%GIT_HOME%\bin” 结果打开cmd,任意使用git命令进行需要的操作]]></content>
+  </entry>
+</search>
