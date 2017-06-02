@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[由一个疑似弱鸡引发的联想]]></title>
+    <url>%2F2017%2F06%2F02%2F%E7%94%B1%E4%B8%80%E4%B8%AA%E7%96%91%E4%BC%BC%E5%BC%B1%E9%B8%A1%E5%BC%95%E5%8F%91%E7%9A%84%E8%81%94%E6%83%B3%2F</url>
+    <content type="text"><![CDATA[我为什么会碰到一个疑似弱鸡，这似乎又是一个漫长的故事。想必人生来就是需要爱和自由的吧，从某一天起，你甘愿多一些奔波和劳累，让一些人变得越来越离不开；正好进入了白昼变长的时期，身体不再留恋多余的睡眠；正好进入了项目阶段性结业的时期，没有工作的时间只想奔向一个舒适的怀抱。 在这条奔向爱和自由的旅途中，我遇见了一个疑似弱鸡：那是一种在人群中会被无视的长相，扎进骨子里的自卑和盲目的自信。而他靠近的小姑娘，同样文静怯弱。我只是在思考：若我能有一大片空隙的空间看到他那么一个具有侵犯性的姿势，他怎么会失去一小点的脑容量去思考侧过身体避免一些生理反应。我就那样看着看着，也许是身边的空隙已经大到他再不移动已经说不过去了，也许他感受到了来自Danica的凝视，我无暇多想，小姑娘下车了，我看到她绯红的脸颊和一丝带着恨意的眼神。 地铁持续前行，疑似弱鸡也到站下车，眼角边似乎清净了，这个小插曲也被湮没在了拥挤的人流中，就像不曾发生过。 思绪泛滥，想到刚毕业的时候我去了北京，见过更拥挤的人流，经历过不疑似而肯定的弱鸡们，望着脚上的铆钉鞋，若是再遇见他们，我的铆钉们绝对会毫不犹豫的定位他们的裆部，用我这些年吸收的脏话大全，唾沫横飞的飚向他们的猥琐面孔，顺带两大耳刮子…然而我当时最厉害的不过也是一句对他母亲的问候，更多的时候憋屈的说不出话，泪水往肚子里吞。 生活已经把我变成了随身携带小刀片的女战士啦，看着车窗里倒映的自己的大脸盘子，笑了笑，这些个弱鸡们，真不是个东西，呸！]]></content>
+      <categories>
+        <category>life协奏曲</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[如何使用Git生成并配置SSH密钥]]></title>
     <url>%2F2017%2F06%2F01%2F%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Git%E7%94%9F%E6%88%90%E5%B9%B6%E9%85%8D%E7%BD%AESSH%E5%AF%86%E9%92%A5%2F</url>
     <content type="text"><![CDATA[前提安装git到本地，能在cmd中使用git命令行 步骤1.设置全局用户名和邮箱git config –global user.name “kakadanica”git config –global user.email “kakadanica.gmail.com”2.生成SSH密钥ssh-keygen -t rsa -C “kakadnaica@gmail.com”如果你之前有生成过，控制台会提示你already exist，并给你打印出密钥的地址，建议删除后重新生成。如果你之前未生成过，直接敲三个回车，密码为空，将会提示你生成成功并显示例如：Your identification has been saved in /c/Users/E450/.ssh/id_rsa.Your public key has been saved in /c/Users/E450/.ssh/id_rsa.pub.The key fingerprint is:3.添加密钥到github上找到id_rsa.pub文件，使用记事本打开，复制内容。登录GitHub，到https://github.com/settings/keys该页面中，新建new SSH Key。输入任意Title，将刚刚复制的内容粘贴到key中，保存提交。 结果在cmd中执行ssh git@github.com命令操作Are you sure you want to continue connecting (yes/no)? yesWarning: Permanently added ‘github.com,192.30.255.112’ (RSA) to the list of known hosts.PTY allocation request failed on channel 0Hi kakadanica! You’ve successfully authenticated, but GitHub does not provide shell access.Connection to github.com closed.如上，表示设置成功！]]></content>
