@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Sublime Text," />
+  <meta name="keywords" content="SpringCloud,Freemarker," />
 
 
 
@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="背景无规矩不成方圆，业内已存在合理和规范的前端开发标准，合理的使用检查工具能够节约时间成本，同时养成优秀的代码习惯。本文所述的配置基于Sublime Text编辑器，基于Code Guide前端开发规范文档; 本文目前只涉及js代码规范检查，核心内容是Eslint工具的使用以及结合Sublime Text的配置。 准备工作 去百度搜索完成Sublime Text 3的安装和配置 安装和学习使用no">
-<meta name="keywords" content="Sublime Text">
+<meta name="description" content="背景作为一个具备java基础的前端工程师，了解到Spring boot是下一代的web框架，而Spring Cloud则是最新最火的微服务的翘楚，有必要在此记录他的项目构建方案，本文适用于前端开发小组的项目搭建，该项目的特性是不作为服务端发布，作为客户端发布，主要基于Spring Cloud，围绕Freemarker技术进行相关的配置，使用讲解。 前提请务必确保你的机器上安装了Eclipse Ja">
+<meta name="keywords" content="SpringCloud,Freemarker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在Sublime Text中使用代码规范检查工具">
-<meta property="og:url" content="http://www.kakadanica.com/2017/07/12/在Sublime-Text中使用代码规范检查工具/index.html">
+<meta property="og:title" content="SpringCloud客户端项目构建(使用Freemarker)">
+<meta property="og:url" content="http://www.kakadanica.com/2017/10/17/SpringCloud客户端项目构建(使用Freemarker)/index.html">
 <meta property="og:site_name" content="kakadanica">
-<meta property="og:description" content="背景无规矩不成方圆，业内已存在合理和规范的前端开发标准，合理的使用检查工具能够节约时间成本，同时养成优秀的代码习惯。本文所述的配置基于Sublime Text编辑器，基于Code Guide前端开发规范文档; 本文目前只涉及js代码规范检查，核心内容是Eslint工具的使用以及结合Sublime Text的配置。 准备工作 去百度搜索完成Sublime Text 3的安装和配置 安装和学习使用no">
-<meta property="og:updated_time" content="2017-07-12T06:11:23.577Z">
+<meta property="og:description" content="背景作为一个具备java基础的前端工程师，了解到Spring boot是下一代的web框架，而Spring Cloud则是最新最火的微服务的翘楚，有必要在此记录他的项目构建方案，本文适用于前端开发小组的项目搭建，该项目的特性是不作为服务端发布，作为客户端发布，主要基于Spring Cloud，围绕Freemarker技术进行相关的配置，使用讲解。 前提请务必确保你的机器上安装了Eclipse Ja">
+<meta property="og:updated_time" content="2017-10-17T09:58:00.698Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在Sublime Text中使用代码规范检查工具">
-<meta name="twitter:description" content="背景无规矩不成方圆，业内已存在合理和规范的前端开发标准，合理的使用检查工具能够节约时间成本，同时养成优秀的代码习惯。本文所述的配置基于Sublime Text编辑器，基于Code Guide前端开发规范文档; 本文目前只涉及js代码规范检查，核心内容是Eslint工具的使用以及结合Sublime Text的配置。 准备工作 去百度搜索完成Sublime Text 3的安装和配置 安装和学习使用no">
+<meta name="twitter:title" content="SpringCloud客户端项目构建(使用Freemarker)">
+<meta name="twitter:description" content="背景作为一个具备java基础的前端工程师，了解到Spring boot是下一代的web框架，而Spring Cloud则是最新最火的微服务的翘楚，有必要在此记录他的项目构建方案，本文适用于前端开发小组的项目搭建，该项目的特性是不作为服务端发布，作为客户端发布，主要基于Spring Cloud，围绕Freemarker技术进行相关的配置，使用讲解。 前提请务必确保你的机器上安装了Eclipse Ja">
 
 
 
@@ -131,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://www.kakadanica.com/2017/07/12/在Sublime-Text中使用代码规范检查工具/"/>
+  <link rel="canonical" href="http://www.kakadanica.com/2017/10/17/SpringCloud客户端项目构建(使用Freemarker)/"/>
 
 
 
 
 
-  <title>在Sublime Text中使用代码规范检查工具 | kakadanica</title>
+  <title>SpringCloud客户端项目构建(使用Freemarker) | kakadanica</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -321,7 +321,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.kakadanica.com/2017/07/12/在Sublime-Text中使用代码规范检查工具/">
+    <link itemprop="mainEntityOfPage" href="http://www.kakadanica.com/2017/10/17/SpringCloud客户端项目构建(使用Freemarker)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="kakadanica">
@@ -338,7 +338,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">在Sublime Text中使用代码规范检查工具</h1>
+          <h1 class="post-title" itemprop="name headline">SpringCloud客户端项目构建(使用Freemarker)</h1>
         
 
         <div class="post-meta">
@@ -350,8 +350,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-12T12:20:45+08:00">
-                2017-07-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-17T11:13:45+08:00">
+                2017-10-17
               </time>
             
 
@@ -407,98 +407,260 @@
       
 
       
-        <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>无规矩不成方圆，业内已存在合理和规范的前端开发标准，合理的使用检查工具能够节约时间成本，同时养成优秀的代码习惯。本文所述的配置基于Sublime Text编辑器，基于<a href="http://alloyteam.github.io/CodeGuide/" target="_blank" rel="external">Code Guide前端开发规范文档</a>; 本文目前只涉及js代码规范检查，核心内容是Eslint工具的使用以及结合Sublime Text的配置。</p>
-<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
-<li>去<a href="http://www.baidu.com" target="_blank" rel="external">百度</a>搜索完成Sublime Text 3的安装和配置</li>
-<li>安装和学习使用nodejs，参考<a href="http://www.kakadanica.com/2017/07/12/Nodejs%20%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE(Windows/">Nodejs的安装和配置（Windows）</a>)</li>
-</ul>
-<h3 id="核心内容"><a href="#核心内容" class="headerlink" title="核心内容"></a>核心内容</h3><ul>
-<li><p><strong>Eslint简介</strong></p>
-<blockquote>
-<p><strong>Eslint</strong>由 JavaScript 红宝书 作者 Nicholas C. Zakas 编写， 2013 年发布第一个版本。 NCZ 的初衷不是重复造一个轮子，而是在实际需求得不到 JSHint 团队响应 的情况下做出的选择：以可扩展、每条规则独立、不内置编码风格为理念编写一个 lint 工具。</p>
-</blockquote>
-<p>  ESLint 主要有以下特点：</p>
-<pre><code>默认规则包含所有 JSLint、JSHint 中存在的规则，易迁移；
-规则可配置性高：可设置「警告」、「错误」两个 error 等级，或者直接禁用；
-包含代码风格检测的规则（可以丢掉 JSCS 了）；
-支持插件扩展、自定义规则。
-</code></pre></li>
-</ul>
-<ul>
-<li><p><strong>安装Eslint</strong></p>
-<p>  使用nodejs的npm工具全局安装，语法如下：</p>
-<pre><code>npm install eslint -g
-</code></pre></li>
-<li><p><strong>配置Eslint代码风格</strong></p>
-<p>  在项目或工程的的根目录新建.eslintrc.js文件，基于<a href="http://alloyteam.github.io/CodeGuide/#javascript" target="_blank" rel="external">Code Guide前端开发规范文档JAVASCRIPT部分的规范</a>, 文件内容建议如如下：</p>
-<pre><code>module.exports = {
-    &quot;env&quot;: {
-        &quot;browser&quot;: true
-    },
-    &quot;extends&quot;: &quot;eslint:recommended&quot;,
-    &quot;rules&quot;: {
-        &quot;camelcase&quot;: 2, // 强制驼峰法命名
-        &quot;id-match&quot;: 2, // 禁止重复定义
-        &quot;indent&quot;: [2,&quot;tab&quot;], // 缩进采取Tab
-        &quot;semi&quot;: [2, &quot;always&quot;], // 语句强制分号结尾
-        &quot;quotes&quot;: [2,&quot;single&quot;], // 引号类型 单引号
-        &quot;no-dupe-args&quot;: 2,// 函数参数不能重复
-        &quot;curly&quot;: [2, &quot;all&quot;],//必须使用 if(){} 中的{}
-        &quot;one-var&quot;:2, // 语句块不允许出现连续两个var
-        &quot;vars-on-top&quot;: 2, // 定义的变量必须在作用域的顶部
-        &quot;newline-after-var&quot;: 2, // 定义完变量必须换一行
-        &quot;space-before-blocks&quot;: [2, &quot;always&quot;],//不以新行开始的块{前面要不要有空格
-        &quot;space-before-function-paren&quot;: [2, &quot;never&quot;],//函数定义时括号前面要不要有空格
-        &quot;no-spaced-func&quot;: 2,//函数调用时 函数名与()之间不能有空格
-        &quot;space-in-parens&quot;: [2, &quot;never&quot;],//小括号里面要不要有空格
-        &quot;space-infix-ops&quot;: 2,//中缀操作符周围要不要有空格
-        &quot;space-unary-ops&quot;: [2, { &quot;words&quot;: true, &quot;nonwords&quot;: false }],//一元运算符的前/后要不要加空格
-        &quot;spaced-comment&quot;: 2,//注释风格要不要有空格什么的
-        &quot;no-multiple-empty-lines&quot;: [1, {&quot;max&quot;: 2}],//空行最多不能超过2行
-        &quot;operator-linebreak&quot;: [2, &quot;after&quot;],// 换行时运算符在行尾还是行首
-        &quot;no-unneeded-ternary&quot;: 2,//禁止不必要的嵌套 var isYes = answer === 1 ? true : false;
-        &quot;no-unreachable&quot;: 2,// 不能有无法执行的代码
-        &quot;default-case&quot;: 2,//switch语句最后必须有default
-        &quot;no-sequences&quot;: 0,//禁止使用逗号运算符
-        &quot;no-empty&quot;: 2,// 块语句中的内容不能为空
-        &quot;no-eq-null&quot;: 2, // 禁止对null使用==或!=运算符
-        &quot;eqeqeq&quot;: 2,//必须使用全等
-        &quot;use-isnan&quot;: 2,// 禁止比较时使用NaN，只能用isNaN()
-        &quot;no-underscore-dangle&quot;: 2, //标识符不能以下划线开头
-        &quot;no-undef&quot;: 2, // 不能有未定义的变量
-        &quot;no-use-before-define&quot;: 2,// 未定义前不能使用
-        &quot;no-unused-vars&quot;: [1, {&quot;vars&quot;: &quot;all&quot;, &quot;args&quot;: &quot;after-used&quot;}],// 不能有声明后未被使用的变量或参数 
-        &quot;no-alert&quot;: 1, // 警告弹窗
-        &quot;no-console&quot;: 1, // 警告控制台输出
-        &quot;no-debugger&quot;: 1, // 警告debugger
-        &quot;no-trailing-spaces&quot;: 1, //一行结束后不能有空格
-        &quot;eol-last&quot;: 0, //文件以单一的换行符结尾
-        &quot;padded-blocks&quot;: 0,//块语句内行首行尾是否要空行
-    }
-};
-</code></pre></li>
-<li><p>检查代码规范</p>
-<p>  在项目或工程的根目录打开CMD，使用如下语法检查指定文件</p>
-<pre><code>eslint --fix [file.js][dir]
-</code></pre><p>  例如 </p>
-<pre><code>eslint --fix js\leave_timepicker.js
-</code></pre></li>
-</ul>
-<p>此操作会通过控制台输出检查出来的错误信息，错误信息包含行数以及错误的原因，但是不够智能，我们要达到在日常代码编辑的过程中达到提示和修复的功能，就需要将Eslint集成到Sublime Text编辑器啦</p>
-
-<ul>
-<li><p>集成Sublime Text</p>
-<p>  在 Sublime Text 中你需要安装两个插件：    </p>
-<ol>
-<li><p>安装 SublimeLinter<br>调出package control搜索SublimeLinter进行安装</p>
+        <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>作为一个具备java基础的前端工程师，了解到Spring boot是下一代的web框架，而Spring Cloud则是最新最火的微服务的翘楚，有必要在此记录他的项目构建方案，本文适用于前端开发小组的项目搭建，该项目的特性是不作为服务端发布，作为客户端发布，主要基于Spring Cloud，围绕Freemarker技术进行相关的配置，使用讲解。</p>
+<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>请务必确保你的机器上安装了Eclipse Java EE IDE for Web Develipers.我的版本是Mars.2 Release(4.5.2),这将是特别重要的关键的一步， Eclipse在手，天下我有。</p>
+<p>请务必一定程度的了解Spring Cloud模式和概念。</p>
+<p>请务必一定程度的了解Freemarker功能使用方法。</p>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ol>
+<li><p>下载</p>
+<p> 在Help-Eclipse MarketPlace的搜素下载sts(Spring Tools(aka Spring IDE and Spring Tool Suite)), 安装等待，成功后重启Eclipse。</p>
 </li>
-<li><p>安装 SublimeLinter-contrib-eslint<br>调出package control搜索eslint安装即可，全名：SublimeLinter-contrib-eslint。<br>注意：该插件只支持Sublime text 3</p>
-<p>关闭编辑器，再打开编辑器, 导入项目。<br>打开任意js文件，右键-&gt;SublimeLinter-&gt;LintMode-&gt;点击Save Only, 设置为在文件进行保存操作后检查的模式。</p>
+<li><p>构建项目</p>
+<p> 此时已经成功的下载sts,在Java EE模式下的Project Ecplorer窗口中</p>
+<p> <strong>第一步</strong> 右键new-Other-Spring-Spring Starter Project（创建基于MAVEN的SpringCloud项目）</p>
+<p> 作为前端小组开发的基于客户端的项目，构建的时候必须加载<strong><em>Eureka Discovery组件</em></strong>（服务注册，用于向Eureka Server注册，将客户端信息发送到Eureka Server），<strong><em>Feign组件</em></strong>（作为HTTP客户端调用远程HTTP服务），<strong><em>Ribbon组件</em></strong>（负载均衡）。</p>
+<p> 作为服务提供开发组的微服务项目，构建时在上面的基础上还需要加载<strong><em>Eureka Server组件</em></strong>（用于发布可调用的服务），<strong><em>Zuul组件</em></strong>（路由 ）等…具体根据项目实际需求决定。</p>
+<p> 加载的组件，可在新建项目的第二步搜索勾选组件，也可自行配置pom.xml文件，如下（客户端开发小组项目配置示例）：</p>
+<pre><code>&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-cloud-starter-eureka&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-cloud-starter-feign&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-cloud-starter-ribbon&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    ...
+&lt;/dependencies&gt;    
+</code></pre><p> 客户端项目开发还需要使用Freemarker等其他基本库，则需要在pom.xml中添加配置，如下：</p>
+<pre><code>&lt;!-- Freemarker --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-freemarker&lt;/artifactId&gt;
+&lt;/dependency&gt;
+&lt;!-- Spring boot basic --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+    &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+&lt;/dependency&gt;
+&lt;!-- alibaba --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
+    &lt;artifactId&gt;fastjson&lt;/artifactId&gt;
+    &lt;version&gt;1.1.15&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;!-- java developers&apos; basic jar 1--&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;
+    &lt;artifactId&gt;commons-lang3&lt;/artifactId&gt;
+    &lt;version&gt;3.4&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;!-- java developers&apos; basic jar 2--&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;net.sf.json-lib&lt;/groupId&gt;
+  &lt;artifactId&gt;json-lib&lt;/artifactId&gt;
+  &lt;version&gt;2.4&lt;/version&gt;
+  &lt;classifier&gt;jdk15&lt;/classifier&gt;
+&lt;/dependency&gt;
+&lt;!-- 企业封装工具包 --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;com.emin&lt;/groupId&gt;
+    &lt;artifactId&gt;base&lt;/artifactId&gt;
+    &lt;version&gt;v1.8&lt;/version&gt;
+&lt;/dependency&gt; 
+</code></pre><p> 项目创建成功之后，选中项目名右键Maven-Update Project-勾选项目-ok。</p>
+<p> Tips</p>
+<p> ==a. 删除项目路径下的mvnw文件和mvnw.cmd文件==</p>
+<p> ==b. Maven配置找不到包，需要配置Maven的settings==</p>
+<p> 配置User Settings的文件，文件内容如下：</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;settings xmlns=&quot;http://maven.apache.org/SETTINGS/1.0.0&quot;
+      xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+      xsi:schemaLocation=&quot;http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd&quot;&gt;
+
+    &lt;localRepository&gt;E:/repo&lt;/localRepository&gt;
+    &lt;interactiveMode&gt;true&lt;/interactiveMode&gt;
+    &lt;offline&gt;false&lt;/offline&gt;
+        &lt;pluginGroups&gt;&lt;/pluginGroups&gt;
+    &lt;proxies&gt;&lt;/proxies&gt;
+    &lt;servers&gt;
+        &lt;server&gt;
+            &lt;id&gt;dz-publish&lt;/id&gt;
+            &lt;username&gt;dz-publish&lt;/username&gt;
+            &lt;password&gt;dzpublish&lt;/password&gt;
+        &lt;/server&gt;
+    &lt;/servers&gt;
+    &lt;mirrors&gt;
+        &lt;mirror&gt;
+            &lt;id&gt;dz-server-mirror&lt;/id&gt;
+            &lt;mirrorOf&gt;*&lt;/mirrorOf&gt;
+            &lt;name&gt;dz inner maven nexus server&lt;/name&gt;
+            &lt;url&gt;http://192.168.0.250:10004/nexus/content/groups/public/&lt;/url&gt;
+        &lt;/mirror&gt;
+    &lt;/mirrors&gt;
+    &lt;profiles&gt;&lt;/profiles&gt;
+&lt;/settings&gt;
+</code></pre><p> 您需要关心localRepository节点，mirrors-mirror-url节点的配置。<br> localRepository节点配置Maven将jar包加载在本地的那个磁盘路径里；<br> url节点配置Maven从何处去下载jar包；<br> 配置信息根据企业实际项目情况约定。</p>
+<p> 修改生成你的配置文件，放置在本地的指定目录下；<br> Eclipse状态栏-Windows-Preferences-Maven-User Settings，找到你的配置文件详细路径配置在User Settings的文本框中-Apply-ok。</p>
+<p> <strong>第二步</strong> 项目配置（客户端项目的应用配置）</p>
+<p> 项目创建成功后，你会发现该项目自动生成了一些文件，没用的我已经在上面建议你删除掉了，现在先介绍我们没有删掉的有用的文件。</p>
+<p> ==目录1 src/main/java==</p>
+<p> 该目录下的生成了一个XXXAppication.java的文件，这个文件用于项目启动。</p>
+<p> <strong>启动方式</strong> ：选中该文件，右键Run As-Spring Boot App（建议在完成了<strong>第三步 目录资源整理</strong>后再尝试）</p>
+<p> ==目录2 sec/main/resources==</p>
+<p> 该目录下生成了一个application.properties的文件，这个文件用于项目配置。</p>
+<p> <strong>配置方式</strong>:  </p>
+<p> <strong>首先</strong>，为了配置信息使用树状结构展示更加清晰了然，建议您将properties后缀改成yml后缀。  </p>
+<p> <strong>然后</strong><br> 配置项目合作的微服务中心地址：</p>
+<pre><code>eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.0.223:8761/eureka/
+</code></pre></li>
+</ol>
+<pre><code>配置项目的端口号：
+
+    server:
+        port: 8765
+
+配置项目名称，Freemarker信息：
+
+    spring:
+      application:
+        name: wxbase
+      freemarker:
+        allow-request-override: false
+        cache: true
+        checkTemplateLocation: true
+        charSet: UTF-8
+        contentType: text/html
+        exposeRequestAttributes: true
+        exposeSessionAttributes: true
+        exposeSpringMacroHelpers: false
+        suffix: .html
+        templateLoaderPath: classpath:/
+        prefer-file-system-access: false
+        settings:
+          templateExceptionHandler: ignore
+
+==Freemarker配置说明：==
+
+templateLoaderPath对应的值（classpath:/）表示的是根目录，它用于后台服务返回页面的路径使用，在此有一个稍微的概念，后面具体使用了解。
+
+suffix对应的值（.html）表示的是页面模板的后缀，有的项目使用ftl后缀，后台服务返回页面的时候就会找ftl后缀的页面，也可以理解为后台服务返回页面时自动加上了配置好的后缀。
+
+至此，项目配置完成。
+
+**第三步** 目录资源整理
+
+==重点1== 我强烈的建议你将前端的css、js、图片等文件作为静态资源放置在src/main/resources下新建文件夹static目录下。
+
+然后在XXXXApplication.java文件的同级目录下，新建我们此处命名为WebMvcConfig.java文件，它将是我们手动的编写一个拦截器，目的是在项目启动的时候，将静态资源的访问路径注册到根目录下(你也可以有其它的目的，根据你的项目实际情况来)，内容如下：
+
+    package com.emin.platform.wxbase;
+
+    import org.springframework.beans.factory.annotation.Configurable;
+    import org.springframework.web.servlet.config.annotation.ContentNegotiationConfigurer;
+    import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+    import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+    import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+
+    @Configurable
+    @EnableWebMvc
+    public class WebMvcConfig extends WebMvcConfigurerAdapter{
+
+        @Override
+        public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
+
+            configurer.favorPathExtension(false);
+        }
+        @Override
+        public void addResourceHandlers(ResourceHandlerRegistry registry) {
+            registry.addResourceHandler(&quot;/js/**&quot;)
+                    .addResourceLocations(&quot;classpath:/static/js/&quot;);
+            registry.addResourceHandler(&quot;/css/**&quot;)
+                    .addResourceLocations(&quot;classpath:/static/css/&quot;);
+            registry.addResourceHandler(&quot;/img/**&quot;)
+                    .addResourceLocations(&quot;classpath:/static/img/&quot;);
+
+
+        }
+
+
+    }
+
+完成了这个文件的编写，我们可以在前端的页面上通过/js、/css、/img去访问我们的静态资源，不会暴露它具体在哪个路径下。
+
+@Configurable、@EnableWebMvc这两个注解会确保该文件在项目启动的时候被执行。
+
+==重点2== 我们要在src/main下面新建webapp的文件夹，点击webapp文件夹，右键-Build Path-Use as Source Folder。
+
+webapp文件夹下将会放置我们的项目开发的模块或者页面代码。
+
+至于Use as Source Folder这个操作可以让我们后台通过&apos;classpath:/&apos;直接访问webapp下面的文件，意思是：  
+用户发送请求到后台服务，后台服务经过一系列的数据处理，通过访问页面路径的形式将处理结果信息返回到页面上，&apos;classpath:/&apos;将会是webapp这个文件夹的路径。  
+而上文中我们在application.yml中配置了templateLoaderPath的值为&apos;classpath:/&apos;,那么此时webapp文件夹的访问路径就等于该项目的根&apos;/&apos;。
+
+**举例说明：**
+
+在src/main/weapp目录下新建index.html, 内容如下：
+
+
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, user-scalable=0&quot;&gt;
+    &lt;title&gt;主页&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    hello world
+    &lt;/body&gt;
+    &lt;/html&gt;
+
+
+在XXXXApplication.java的同级目录下新建controller包，在该包下new一个IndexController.java文件。内容如下：
+
+
+    package com.emin.platform.wxbase.controller;
+
+    import java.io.UnsupportedEncodingException;
+
+    import javax.servlet.http.HttpServletRequest;
+
+    import org.springframework.web.bind.annotation.RequestMapping;
+    import org.springframework.web.bind.annotation.RequestMethod;
+    import org.springframework.web.bind.annotation.ResponseBody;
+    import org.springframework.web.bind.annotation.RestController;
+    import org.springframework.web.servlet.ModelAndView;
+
+    @RestController
+    public class IndexController{
+
+        @ResponseBody
+        @RequestMapping(value = &quot;/&quot;,method = RequestMethod.GET)
+        public ModelAndView index(HttpServletRequest request) throws UnsupportedEncodingException{
+            ModelAndView mv = new ModelAndView(&quot;index&quot;);
+            return mv;
+        }
+    }
+
+该Controller将项目的根目录访问指向了index.html页面，&apos;.html&apos;的后缀是项目配置里配置好了的，能找到webapp下的index.html页面,也是因为我们将webapp文件夹配置为Use as Source Folder。
+</code></pre><ol>
+<li><p>微服务合作开发</p>
+</li>
+<li><p>Freemarker在项目中的使用</p>
 </li>
 </ol>
-</li>
-</ul>
-<p><strong>以上，请享用Eslint带来的便利。</strong></p>
 
       
     </div>
@@ -528,7 +690,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Sublime-Text/" rel="tag"># Sublime Text</a>
+            <a href="/tags/SpringCloud/" rel="tag"># SpringCloud</a>
+          
+            <a href="/tags/Freemarker/" rel="tag"># Freemarker</a>
           
         </div>
       
@@ -541,8 +705,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/12/Nodejs 的安装和配置(Windows)/" rel="next" title="Nodejs 的安装和配置(Windows)">
-                <i class="fa fa-chevron-left"></i> Nodejs 的安装和配置(Windows)
+              <a href="/2017/10/17/Cloud项目构建/" rel="next" title="Cloud项目构建'">
+                <i class="fa fa-chevron-left"></i> Cloud项目构建'
               </a>
             
           </div>
@@ -550,10 +714,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/17/Cloud项目构建/" rel="prev" title="Cloud项目构建'">
-                Cloud项目构建' <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -682,7 +842,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#核心内容"><span class="nav-number">3.</span> <span class="nav-text">核心内容</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前提"><span class="nav-number">2.</span> <span class="nav-text">前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#步骤"><span class="nav-number">3.</span> <span class="nav-text">步骤</span></a></li></ol></div>
             
 
           </div>
