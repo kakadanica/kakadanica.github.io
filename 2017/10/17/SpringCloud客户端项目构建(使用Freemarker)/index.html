@@ -100,7 +100,7 @@
 <meta property="og:url" content="http://www.kakadanica.com/2017/10/17/SpringCloud客户端项目构建(使用Freemarker)/index.html">
 <meta property="og:site_name" content="kakadanica">
 <meta property="og:description" content="背景作为一个具备java基础的前端工程师，了解到Spring boot是下一代的web框架，而Spring Cloud则是最新最火的微服务的翘楚，有必要在此记录他的项目构建方案，本文适用于前端开发小组的项目搭建，该项目的特性是不作为服务端发布，作为客户端发布，主要基于Spring Cloud，围绕Freemarker技术进行相关的配置，使用讲解。 前提请务必确保你的机器上安装了Eclipse Ja">
-<meta property="og:updated_time" content="2017-10-18T03:08:20.688Z">
+<meta property="og:updated_time" content="2017-10-18T03:23:43.496Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringCloud客户端项目构建(使用Freemarker)">
 <meta name="twitter:description" content="背景作为一个具备java基础的前端工程师，了解到Spring boot是下一代的web框架，而Spring Cloud则是最新最火的微服务的翘楚，有必要在此记录他的项目构建方案，本文适用于前端开发小组的项目搭建，该项目的特性是不作为服务端发布，作为客户端发布，主要基于Spring Cloud，围绕Freemarker技术进行相关的配置，使用讲解。 前提请务必确保你的机器上安装了Eclipse Ja">
@@ -411,7 +411,7 @@
 <h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>请务必确保你的机器上安装了Eclipse Java EE IDE for Web Develipers.我的版本是Mars.2 Release(4.5.2),这将是特别重要的关键的一步， Eclipse在手，天下我有。</p>
 <p>请务必一定程度的了解Spring Cloud模式和概念。</p>
 <p>请务必一定程度的了解Freemarker功能使用方法。</p>
-<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p>在Help-Eclipse MarketPlace的搜素下载sts(Spring Tools(aka Spring IDE and Spring Tool Suite)), 安装等待，成功后重启Eclipse。</p>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p>在Help-Eclipse MarketPlace的搜索下载sts(Spring Tools(aka Spring IDE and Spring Tool Suite)), 安装等待，成功后重启Eclipse。</p>
 <h4 id="构建项目"><a href="#构建项目" class="headerlink" title="构建项目"></a>构建项目</h4><p>此时已经成功的下载sts,</p>
 <h5 id="第一步-创建基于MAVEN的SpringCloud项目"><a href="#第一步-创建基于MAVEN的SpringCloud项目" class="headerlink" title="第一步 创建基于MAVEN的SpringCloud项目"></a>第一步 创建基于MAVEN的SpringCloud项目</h5><p>在Java EE模式下的Project Ecplorer窗口中，右键new-Other-Spring-Spring Starter Project。</p>
 <p>作为前端小组开发的基于客户端的项目，构建的时候必须加载<strong><em>Eureka Discovery组件</em></strong>（服务注册，用于向Eureka Server注册，将客户端信息发送到Eureka Server），<strong><em>Feign组件</em></strong>（作为HTTP客户端调用远程HTTP服务），<strong><em>Ribbon组件</em></strong>（负载均衡）。</p>
