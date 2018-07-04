@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -121,7 +121,7 @@
     motion: true,
     duoshuo: {
       userId: '0',
-      author: '博主'
+      author: 'Author'
     },
     algolia: {
       applicationID: '',
@@ -144,7 +144,7 @@
   <title>ES6 Module在项目中的用法研究 | kakadanica</title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh">
 
   
 
@@ -218,7 +218,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            首页
+            Startseite
           </a>
         </li>
       
@@ -228,7 +228,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            归档
+            Archiv
           </a>
         </li>
       
@@ -238,7 +238,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            分类
+            Kategorien
           </a>
         </li>
       
@@ -248,7 +248,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            标签
+            Tags
           </a>
         </li>
       
@@ -258,7 +258,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            关于
+            Über
           </a>
         </li>
       
@@ -271,7 +271,7 @@
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
-            搜索
+            Suche
           </a>
         </li>
       
@@ -291,7 +291,7 @@
     </span>
     <div class="local-search-input-wrapper">
       <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
+             placeholder="Searching..." spellcheck="false"
              type="text" id="local-search-input">
     </div>
   </div>
@@ -352,9 +352,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-04T14:32:35+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T14:32:35+08:00">
                 2018-04-04
               </time>
             
@@ -400,16 +400,16 @@
 <p>export 可输出变量，函数和类</p>
 <p>export 可自定义输出的变量或者函数的名字</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">// 输出单个变量，把export 关键字放在变量定义之前，如下：</div><div class="line">export let a = 1;</div><div class="line">export let b = 2;</div><div class="line">// 或者如下输出单个变量，语法强调大括号是必须存在的: export的目的是输出接口，必须和模块内的变量建立一一的对应</div><div class="line">let c = 1;</div><div class="line">export &#123;c&#125;</div><div class="line">// 基于上面的语法释义，输出多个变量如下：</div><div class="line">let d = 1, e = 2;</div><div class="line"></div><div class="line">export &#123;d, e&#125;;</div><div class="line"></div><div class="line">// 简单吧，输出函数和类的原则同上</div><div class="line"></div><div class="line">// 输出单个函数或类</div><div class="line">export function v1() &#123; ... &#125;</div><div class="line">export class c1 &#123; ... &#125;</div><div class="line">// 或者</div><div class="line">function v2() &#123; ... &#125;</div><div class="line">class c2 &#123;&#125;</div><div class="line">export &#123;v2&#125;;</div><div class="line">export &#123;c2&#125;;</div><div class="line">// 输出多个函数或类</div><div class="line">function v3() &#123; ... &#125;</div><div class="line">function v4() &#123; ... &#125;</div><div class="line">class c3 &#123; ... &#125;</div><div class="line">class c4 &#123; ... &#125;</div><div class="line">export &#123;v3, v4, c3, c4&#125;</div><div class="line"></div><div class="line">// 自定义输出命名</div><div class="line">let f = &apos;f&apos;;</div><div class="line">function v5() &#123; ... &#125;</div><div class="line">class c5 &#123;&#125;</div><div class="line">export &#123;</div><div class="line">	f as varibleF,</div><div class="line">	v5 as functionV5,</div><div class="line">	c5 as classC5</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 输出单个变量，把export 关键字放在变量定义之前，如下：</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">let</span> a = <span class="number">1</span>;</div><div class="line"><span class="keyword">export</span> <span class="keyword">let</span> b = <span class="number">2</span>;</div><div class="line"><span class="comment">// 或者如下输出单个变量，语法强调大括号是必须存在的: export的目的是输出接口，必须和模块内的变量建立一一的对应</span></div><div class="line"><span class="keyword">let</span> c = <span class="number">1</span>;</div><div class="line"><span class="keyword">export</span> &#123;c&#125;</div><div class="line"><span class="comment">// 基于上面的语法释义，输出多个变量如下：</span></div><div class="line"><span class="keyword">let</span> d = <span class="number">1</span>, e = <span class="number">2</span>;</div><div class="line"></div><div class="line"><span class="keyword">export</span> &#123;d, e&#125;;</div><div class="line"></div><div class="line"><span class="comment">// 简单吧，输出函数和类的原则同上</span></div><div class="line"></div><div class="line"><span class="comment">// 输出单个函数或类</span></div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">v1</span>(<span class="params"></span>) </span>&#123; ... &#125;</div><div class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">c1</span> </span>&#123; ... &#125;</div><div class="line"><span class="comment">// 或者</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">v2</span>(<span class="params"></span>) </span>&#123; ... &#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">c2</span> </span>&#123;&#125;</div><div class="line"><span class="keyword">export</span> &#123;v2&#125;;</div><div class="line"><span class="keyword">export</span> &#123;c2&#125;;</div><div class="line"><span class="comment">// 输出多个函数或类</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">v3</span>(<span class="params"></span>) </span>&#123; ... &#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">v4</span>(<span class="params"></span>) </span>&#123; ... &#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">c3</span> </span>&#123; ... &#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">c4</span> </span>&#123; ... &#125;</div><div class="line"><span class="keyword">export</span> &#123;v3, v4, c3, c4&#125;</div><div class="line"></div><div class="line"><span class="comment">// 自定义输出命名</span></div><div class="line"><span class="keyword">let</span> f = <span class="string">'f'</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">v5</span>(<span class="params"></span>) </span>&#123; ... &#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">c5</span> </span>&#123;&#125;</div><div class="line"><span class="keyword">export</span> &#123;</div><div class="line">	f <span class="keyword">as</span> varibleF,</div><div class="line">	v5 <span class="keyword">as</span> functionV5,</div><div class="line">	c5 <span class="keyword">as</span> classC5</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h5 id="import-语法简略"><a href="#import-语法简略" class="headerlink" title="import 语法简略"></a>import 语法简略</h5><blockquote>
 <p>导入就是导入，记住语法就行了，不要多想乱写，如下<br>import {接口1, 接口2, 接口3, … 接口n} from ‘模块文件路径’</p>
 </blockquote>
 <p>我并不会再多说其它什么了，睁大眼睛看好记住，这就是import的语法。</p>
 <h4 id="小试牛刀"><a href="#小试牛刀" class="headerlink" title="小试牛刀"></a>小试牛刀</h4><p>1 创建一个小项目如图，项目中包含两个文件a.mjs, b.mjs(mjs后缀，我们这里理解为module javascript)。<br><img src="/2018/04/04/ES6-Module在项目中的用法研究/2018040901.jpg" alt="效果图"></p>
-<p>2 我们在a.mjs中使用export语法输出接口，代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">let name = &apos;Xiao Nai Miao&apos;,</div><div class="line">	describle = &apos;she has been falling in mad love with a guy&apos;;</div><div class="line"></div><div class="line">function getGuyInfo() &#123;</div><div class="line">	return &#123;</div><div class="line">		name: &apos;Xiao Nai Gou&apos;,</div><div class="line">		describle: &apos;sooooooo sweet and charming~&apos;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">export &#123;name, describle, getGuyInfo&#125;;</div></pre></td></tr></table></figure></p>
-<p>3 我们在b.mjs中使用import语法接收a模块的输出接口,并且使用这些接口对象<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">import &#123;name, describle, getGuyInfo&#125; from &apos;./a.mjs&apos;;</div><div class="line"></div><div class="line"></div><div class="line">console.info(&apos;A girl’s name is &apos; + name + &apos;, and &apos; + describle + &apos; named &apos; + getGuyInfo().name + &apos; , because &apos; + getGuyInfo().name + &apos; is &apos; + getGuyInfo().describle);</div></pre></td></tr></table></figure></p>
+<p>2 我们在a.mjs中使用export语法输出接口，代码如下<br><figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">let name = <span class="symbol">'Xiao</span> Nai Miao',</div><div class="line">	describle = <span class="symbol">'she</span> has been falling <span class="keyword">in</span> mad love <span class="keyword">with</span> a guy';</div><div class="line"></div><div class="line"><span class="keyword">function</span> <span class="title">getGuyInfo</span>() &#123;</div><div class="line">	<span class="keyword">return</span> <span class="type">&#123;</span></div><div class="line">		name: <span class="symbol">'Xiao</span> Nai Gou',</div><div class="line">		describle: <span class="symbol">'sooooooo</span> sweet <span class="keyword">and</span> charming~'</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">export &#123;name, describle, getGuyInfo&#125;;</div></pre></td></tr></table></figure></p>
+<p>3 我们在b.mjs中使用import语法接收a模块的输出接口,并且使用这些接口对象<br><figure class="highlight sqf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">import &#123;<span class="built_in">name</span>, describle, getGuyInfo&#125; <span class="keyword">from</span> <span class="string">'./a.mjs'</span>;</div><div class="line"></div><div class="line"></div><div class="line">console.info(<span class="string">'A girl’s name is '</span> + <span class="built_in">name</span> + <span class="string">', and '</span> + describle + <span class="string">' named '</span> + getGuyInfo().<span class="built_in">name</span> + <span class="string">' , because '</span> + getGuyInfo().<span class="built_in">name</span> + <span class="string">' is '</span> + getGuyInfo().describle);</div></pre></td></tr></table></figure></p>
 <p>4 目前我学会的使用方式</p>
-<p>1) nodejs 加载<br>首先你的确保你本地的nodejs是最新的版本，使用node -v查看版本号，我的是v9.10.1<br>最新的nodejs版本已经开始支持es6 module, 但是它要求你的module文件后缀名是‘mjs’,因此从一开始创建项目我就遵循了这个规则<br>现在我们在cmd进入创建项目【es6-module】的根目录，键入node运行es6 module 的如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node --experimental-modules b.mjs</div></pre></td></tr></table></figure><br>因为我们在b.mjs导入了a.mjs的借口，并使用了它的数据，所以我们执行b.mjs文件。</p>
+<p>1) nodejs 加载<br>首先你的确保你本地的nodejs是最新的版本，使用node -v查看版本号，我的是v9.10.1<br>最新的nodejs版本已经开始支持es6 module, 但是它要求你的module文件后缀名是‘mjs’,因此从一开始创建项目我就遵循了这个规则<br>现在我们在cmd进入创建项目【es6-module】的根目录，键入node运行es6 module 的如下命令：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">node</span> <span class="title">--experimental-modules</span> b.mjs</div></pre></td></tr></table></figure><br>因为我们在b.mjs导入了a.mjs的借口，并使用了它的数据，所以我们执行b.mjs文件。</p>
 <p>执行结果如下：<br><img src="/2018/04/04/ES6-Module在项目中的用法研究/2018040902.jpg" alt="效果图"></p>
 <blockquote>
 <p>A girl’s name is Xiao Nai Miao, and she has been falling in mad love with a guy named Xiao Nai Gou , because Xiao Nai Gou is sooooooo sweet and charming~</p>
@@ -421,11 +421,11 @@
 <p>然后，使用compile-modules convert命令，将 ES6 模块文件转码。<br>-o参数可以指定转码后的文件名。</p>
 <p>$ compile-modules convert -o out.js file1.js</p>
 <p>现在我们在cmd进入创建项目【es6-module】的根目录，按照上面的转码语法，键入如下命令并且回车：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile-modules convert -o index.js b.mjs</div></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile-modules convert -o index<span class="selector-class">.js</span> <span class="selector-tag">b</span>.mjs</div></pre></td></tr></table></figure>
 <p>这句命令的意思将b.mjs转码成新的文件，它的名字我命名为index.js</p>
 <p><img src="/2018/04/04/ES6-Module在项目中的用法研究/2018040903.jpg" alt="效果图"><br>没有任何报错信息表示转码成功，这个时候你去看你的项目目录,将会显示转码成功后的index.js。</p>
 <p><img src="/2018/04/04/ES6-Module在项目中的用法研究/2018040904.jpg" alt="效果图"></p>
-<p>打开index.js文件，它合并了a.mjs和b.mjs, 变成了我们熟悉的es5的味道。如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">(function() &#123;</div><div class="line">    &quot;use strict&quot;;</div><div class="line">    let $$a$mjs$$name = &apos;Xiao Nai Miao&apos;,</div><div class="line">        $$a$mjs$$describle = &apos;she has been falling in mad love with a guy&apos;;</div><div class="line"></div><div class="line">    function $$a$mjs$$getGuyInfo() &#123;</div><div class="line">        return &#123;</div><div class="line">            name: &apos;Xiao Nai Gou&apos;,</div><div class="line">            describle: &apos;sooooooo sweet and charming~&apos;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    console.info(&apos;A girl’s name is &apos; + $$a$mjs$$name + &apos;, and &apos; + $$a$mjs$$describle + &apos; named &apos; + $$a$mjs$$getGuyInfo().name + &apos; , because &apos; + $$a$mjs$$getGuyInfo().name + &apos; is &apos; + $$a$mjs$$getGuyInfo().describle);</div><div class="line">&#125;).call(this);</div><div class="line"></div><div class="line">//# sourceMappingURL=index.js.map</div></pre></td></tr></table></figure><br>这个文件可以被任意的浏览器识别和运行，是的，就那么简单！</p>
+<p>打开index.js文件，它合并了a.mjs和b.mjs, 变成了我们熟悉的es5的味道。如下：<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">(function() &#123;</div><div class="line">    <span class="string">"use strict"</span>;</div><div class="line">    let <span class="symbol">$</span><span class="symbol">$</span>a<span class="symbol">$</span>mjs<span class="symbol">$</span><span class="symbol">$</span>name = <span class="string">'Xiao Nai Miao'</span>,</div><div class="line">        <span class="symbol">$</span><span class="symbol">$</span>a<span class="symbol">$</span>mjs<span class="symbol">$</span><span class="symbol">$</span>describle = <span class="string">'she has been falling in mad love with a guy'</span>;</div><div class="line"></div><div class="line">    function <span class="symbol">$</span><span class="symbol">$</span>a<span class="symbol">$</span>mjs<span class="symbol">$</span><span class="symbol">$</span>getGuyInfo() &#123;</div><div class="line">        return &#123;</div><div class="line">            name: <span class="string">'Xiao Nai Gou'</span>,</div><div class="line">            describle: <span class="string">'sooooooo sweet and charming~'</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    console.info(<span class="string">'A girl’s name is '</span> + <span class="symbol">$</span><span class="symbol">$</span>a<span class="symbol">$</span>mjs<span class="symbol">$</span><span class="symbol">$</span>name + <span class="string">', and '</span> + <span class="symbol">$</span><span class="symbol">$</span>a<span class="symbol">$</span>mjs<span class="symbol">$</span><span class="symbol">$</span>describle + <span class="string">' named '</span> + <span class="symbol">$</span><span class="symbol">$</span>a<span class="symbol">$</span>mjs<span class="symbol">$</span><span class="symbol">$</span>getGuyInfo().name + <span class="string">' , because '</span> + <span class="symbol">$</span><span class="symbol">$</span>a<span class="symbol">$</span>mjs<span class="symbol">$</span><span class="symbol">$</span>getGuyInfo().name + <span class="string">' is '</span> + <span class="symbol">$</span><span class="symbol">$</span>a<span class="symbol">$</span>mjs<span class="symbol">$</span><span class="symbol">$</span>getGuyInfo().describle);</div><div class="line">&#125;).call(this);</div><div class="line"></div><div class="line"><span class="comment">//# sourceMappingURL=index.js.map</span></div></pre></td></tr></table></figure><br>这个文件可以被任意的浏览器识别和运行，是的，就那么简单！</p>
 <h3 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h3><p>到这里，es6 moudle 算是初步入门了，后面的路且长，愿在实践中获得成长。</p>
 
       
@@ -524,10 +524,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
+            Übersicht
           </li>
         </ul>
       
@@ -548,7 +548,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">10</span>
-                <span class="site-state-item-name">日志</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -559,7 +559,7 @@
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
                 <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">分类</span>
+                <span class="site-state-item-name">Kategorien</span>
               </a>
             </div>
           
@@ -570,7 +570,7 @@
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
                 <span class="site-state-item-count">9</span>
-                <span class="site-state-item-name">标签</span>
+                <span class="site-state-item-name">Tags</span>
               </a>
             </div>
           
@@ -636,11 +636,11 @@
 
 
 <div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  主题 -
+  Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Pisces
   </a>

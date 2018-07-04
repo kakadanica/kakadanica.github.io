@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -120,7 +120,7 @@
     motion: true,
     duoshuo: {
       userId: '0',
-      author: '博主'
+      author: 'Author'
     },
     algolia: {
       applicationID: '',
@@ -143,7 +143,7 @@
   <title>一篇文章搞定在vscode中运行springboot项目 | kakadanica</title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh">
 
   
 
@@ -217,7 +217,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            首页
+            Startseite
           </a>
         </li>
       
@@ -227,7 +227,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            归档
+            Archiv
           </a>
         </li>
       
@@ -237,7 +237,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            分类
+            Kategorien
           </a>
         </li>
       
@@ -247,7 +247,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            标签
+            Tags
           </a>
         </li>
       
@@ -257,7 +257,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            关于
+            Über
           </a>
         </li>
       
@@ -270,7 +270,7 @@
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
-            搜索
+            Suche
           </a>
         </li>
       
@@ -290,7 +290,7 @@
     </span>
     <div class="local-search-input-wrapper">
       <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
+             placeholder="Searching..." spellcheck="false"
              type="text" id="local-search-input">
     </div>
   </div>
@@ -351,9 +351,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-03T17:14:58+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-03T17:14:58+08:00">
                 2018-07-03
               </time>
             
@@ -372,7 +372,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">in</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -417,7 +417,7 @@
 <h3 id="安装扩展"><a href="#安装扩展" class="headerlink" title="安装扩展"></a>安装扩展</h3><p>截止目前为止我安装了10个扩展,我按照重要程度如下排序：<br>Language Support for Java(TM) by Red Hat<br>Java Extension Pack<br>Debugger for Java<br>Java Test Runner<br>Maven for Java<br>Spring Boot Support<br>Spring Initializr Java Support<br>Checkstyle for Java<br>Eclipse Keymap<br>Git Project Manager</p>
 <h3 id="用户设置"><a href="#用户设置" class="headerlink" title="用户设置"></a>用户设置</h3><p>点击【文件】-&gt;【首选项】-&gt;【设置】打开User Settings文件<br>搜索“java.home”,点击在设置中替换，配置本机jdk的安装路径<br>搜索“maven”, 找到“maven.executable.path”项，配置maven命令工具的文件路径<br>搜索“maven”, 找到“java.configuration.maven.userSettings”项，配置maven加载配置文件（settings.xml）的所在路径<br>如下：<br><img src="/2018/07/03/一篇文章搞定在vscode中运行springboot项目/config.png" alt="效果图"></p>
 <h3 id="打开项目"><a href="#打开项目" class="headerlink" title="打开项目"></a>打开项目</h3><p>ctrl+o或者【文件】-&gt;【打开文件夹】，将你的项目导入vscode<br>完了之后vscode会根据你的项目推荐你安装扩展，你点OK即可</p>
-<h3 id="maven编译"><a href="#maven编译" class="headerlink" title="maven编译"></a>maven编译</h3><p>【查看】-&gt;【打开视图】-&gt;【终端】，键入maven编译命令：mvn clean compile -U，回车<br>出现如下结果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[INFO] ------------------------------------------------------------------------</div><div class="line">[INFO] BUILD SUCCESS</div><div class="line">[INFO] ------------------------------------------------------------------------</div><div class="line">[INFO] Total time: 7.932 s</div><div class="line">[INFO] Finished at: 2018-07-04T09:38:25+08:00</div><div class="line">[INFO] Final Memory: 46M/300M</div><div class="line">[INFO] ------------------------------------------------------------------------</div></pre></td></tr></table></figure><br>表示maven配置生效<br>这个时候你找到项目文件夹里的pom.xml, 试一下右键【Update Project Configration】, 这个是当你修改了用户设置，使项目及时更新配置的方法</p>
+<h3 id="maven编译"><a href="#maven编译" class="headerlink" title="maven编译"></a>maven编译</h3><p>【查看】-&gt;【打开视图】-&gt;【终端】，键入maven编译命令：mvn clean compile -U，回车<br>出现如下结果<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[<span class="builtin-name">INFO</span>] ------------------------------------------------------------------------</div><div class="line">[<span class="builtin-name">INFO</span>] BUILD SUCCESS</div><div class="line">[<span class="builtin-name">INFO</span>] ------------------------------------------------------------------------</div><div class="line">[<span class="builtin-name">INFO</span>] Total time: 7.932 s</div><div class="line">[<span class="builtin-name">INFO</span>] Finished at: 2018-07-04T09:38:25+08:00</div><div class="line">[<span class="builtin-name">INFO</span>] Final Memory: 46M/300M</div><div class="line">[<span class="builtin-name">INFO</span>] ------------------------------------------------------------------------</div></pre></td></tr></table></figure><br>表示maven配置生效<br>这个时候你找到项目文件夹里的pom.xml, 试一下右键【Update Project Configration】, 这个是当你修改了用户设置，使项目及时更新配置的方法</p>
 <h3 id="运行项目"><a href="#运行项目" class="headerlink" title="运行项目"></a>运行项目</h3><p>ctrl+shift+d,进入调试模式，添加调试相关配置如下<br><img src="/2018/07/03/一篇文章搞定在vscode中运行springboot项目/debug-config.jpg" alt="效果图"><br>配置完成之后，点击左上角绿色启动按钮，观察调试控制台的输出，没报错说明你的springboot项目运行成功了！</p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>要特别注意maven的配置和如何进入调试模式。</p>
 
@@ -519,10 +519,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
+            Übersicht
           </li>
         </ul>
       
@@ -543,7 +543,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">10</span>
-                <span class="site-state-item-name">日志</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -554,7 +554,7 @@
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
                 <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">分类</span>
+                <span class="site-state-item-name">Kategorien</span>
               </a>
             </div>
           
@@ -565,7 +565,7 @@
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
                 <span class="site-state-item-count">9</span>
-                <span class="site-state-item-name">标签</span>
+                <span class="site-state-item-name">Tags</span>
               </a>
             </div>
           
@@ -631,11 +631,11 @@
 
 
 <div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  主题 -
+  Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Pisces
   </a>
