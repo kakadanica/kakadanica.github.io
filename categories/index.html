@@ -340,6 +340,8 @@
           
   <div class="comments" id="comments">
     
+      <div id="gitalk-container"></div>
+    
   </div>
 
 
@@ -587,6 +589,22 @@
 
 
 
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'a29e3501ede7fb677b74',
+          clientSecret: '61473df78e8804782ac6e8193ab610e9610791f5',
+          repo: 'kakadanica.github.io',
+          owner: 'kakadanica',
+          admin: ['kakadanica@gmail.com'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
 
   
