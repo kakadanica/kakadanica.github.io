@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="下载配置npm 前往node.js官网下载并安装工具，这里安装路径选到D盘，D:\Program Files\nodejs安装完毕在命令行输入以下命令测试是否安装成功，正确会出现版本号    1npm -v 改变原有的环境变量，(1) 我们要先配置npm的全局模块的存放路径以及cache的路径，例如我希望将以上两个文件夹放在NodeJS的主目录下，便在NodeJs下建立”node_global”及">
+<meta name="description" content="下载配置npm 前往node.js官网下载并安装工具，这里安装路径选到D盘，D:\Program Files\nodejs  安装完毕在命令行输入以下命令测试是否安装成功，正确会出现版本号1npm -v  改变原有的环境变量  (1) 我们要先配置npm的全局模块的存放路径以及cache的路径，例如我希望将以上两个文件夹放在NodeJS的主目录下，便在NodeJs下建立”node_global”及">
 <meta name="keywords" content="vue,webpack">
 <meta property="og:type" content="article">
-<meta property="og:title" content="&#39;创建以及编译一个vue项目的步骤&#39;">
+<meta property="og:title" content="创建以及编译一个vue项目的步骤">
 <meta property="og:url" content="http://www.kakadanica.com/2018/09/29/创建以及编译一个vue项目的步骤/index.html">
 <meta property="og:site_name" content="kakadanica">
-<meta property="og:description" content="下载配置npm 前往node.js官网下载并安装工具，这里安装路径选到D盘，D:\Program Files\nodejs安装完毕在命令行输入以下命令测试是否安装成功，正确会出现版本号    1npm -v 改变原有的环境变量，(1) 我们要先配置npm的全局模块的存放路径以及cache的路径，例如我希望将以上两个文件夹放在NodeJS的主目录下，便在NodeJs下建立”node_global”及">
-<meta property="og:updated_time" content="2018-09-29T03:46:50.297Z">
+<meta property="og:description" content="下载配置npm 前往node.js官网下载并安装工具，这里安装路径选到D盘，D:\Program Files\nodejs  安装完毕在命令行输入以下命令测试是否安装成功，正确会出现版本号1npm -v  改变原有的环境变量  (1) 我们要先配置npm的全局模块的存放路径以及cache的路径，例如我希望将以上两个文件夹放在NodeJS的主目录下，便在NodeJs下建立”node_global”及">
+<meta property="og:updated_time" content="2018-09-29T03:49:31.624Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="&#39;创建以及编译一个vue项目的步骤&#39;">
-<meta name="twitter:description" content="下载配置npm 前往node.js官网下载并安装工具，这里安装路径选到D盘，D:\Program Files\nodejs安装完毕在命令行输入以下命令测试是否安装成功，正确会出现版本号    1npm -v 改变原有的环境变量，(1) 我们要先配置npm的全局模块的存放路径以及cache的路径，例如我希望将以上两个文件夹放在NodeJS的主目录下，便在NodeJs下建立”node_global”及">
+<meta name="twitter:title" content="创建以及编译一个vue项目的步骤">
+<meta name="twitter:description" content="下载配置npm 前往node.js官网下载并安装工具，这里安装路径选到D盘，D:\Program Files\nodejs  安装完毕在命令行输入以下命令测试是否安装成功，正确会出现版本号1npm -v  改变原有的环境变量  (1) 我们要先配置npm的全局模块的存放路径以及cache的路径，例如我希望将以上两个文件夹放在NodeJS的主目录下，便在NodeJs下建立”node_global”及">
 
 
 
@@ -137,7 +137,7 @@
 
 
 
-  <title>'创建以及编译一个vue项目的步骤' | kakadanica</title>
+  <title>创建以及编译一个vue项目的步骤 | kakadanica</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -338,7 +338,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">'创建以及编译一个vue项目的步骤'</h1>
+          <h1 class="post-title" itemprop="name headline">创建以及编译一个vue项目的步骤</h1>
         
 
         <div class="post-meta">
@@ -408,16 +408,22 @@
 
       
         <h3 id="下载配置npm"><a href="#下载配置npm" class="headerlink" title="下载配置npm"></a>下载配置npm</h3><ol>
-<li>前往node.js官网下载并安装工具，这里安装路径选到D盘，D:\Program Files\nodejs<br>安装完毕在命令行输入以下命令测试是否安装成功，正确会出现版本号    <figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">npm</span> -v</div></pre></td></tr></table></figure></li>
-<li>改变原有的环境变量，<br>(1) 我们要先配置npm的全局模块的存放路径以及cache的路径，例如我希望将以上两个文件夹放在NodeJS的主目录下，便在NodeJs下建立”node_global”及”node_cache”两个文件夹，输入以下命令改变npm配置<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm<span class="built_in"> config </span><span class="builtin-name">set</span><span class="built_in"> prefix </span><span class="string">"D:\Program Files\nodejs\node_global"</span></div><div class="line">npm<span class="built_in"> config </span><span class="builtin-name">set</span> cache <span class="string">"D:\Program Files\nodejs\node_cache"</span></div></pre></td></tr></table></figure>
-(2) 在系统环境变量添加系统变量NODE_PATH，输入路径D:\Program Files\nodejs\node_global\node_modules，此后所安装的模块都会安装到改路径下</li>
+<li>前往node.js官网下载并安装工具，这里安装路径选到D盘，D:\Program Files\nodejs</li>
 </ol>
-<p>(3) 在命令行输入以下命令试着安装express（注：“-g”这个参数意思是装到global目录下，也就是上面说设置的“D:\Program Files\nodejs\node_global”里面。）</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> express -g</div></pre></td></tr></table></figure>
-<p>安装完毕后可以看到.\node_global\node_modules\express 已经有内容</p>
-<p>(4) 在命令行输入node进入编辑模式，输入以下代码测试是否能正常加载模块：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">require</span><span class="params">(<span class="string">'express'</span>)</span></span></div></pre></td></tr></table></figure>
-<p>假设成功，可以看到有输出。假设出错，检查NODE_PATH的路径。</p>
+<p>安装完毕在命令行输入以下命令测试是否安装成功，正确会出现版本号<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">npm</span> -v</div></pre></td></tr></table></figure></p>
+<ol>
+<li><p>改变原有的环境变量</p>
+<p> (1) 我们要先配置npm的全局模块的存放路径以及cache的路径，例如我希望将以上两个文件夹放在NodeJS的主目录下，便在NodeJs下建立”node_global”及”node_cache”两个文件夹，输入以下命令改变npm配置</p>
+ <figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm<span class="built_in"> config </span><span class="builtin-name">set</span><span class="built_in"> prefix </span><span class="string">"D:\Program Files\nodejs\node_global"</span></div><div class="line">npm<span class="built_in"> config </span><span class="builtin-name">set</span> cache <span class="string">"D:\Program Files\nodejs\node_cache"</span></div></pre></td></tr></table></figure>
+<p> (2) 在系统环境变量添加系统变量NODE_PATH，输入路径D:\Program Files\nodejs\node_global\node_modules，此后所安装的模块都会安装到改路径下</p>
+<p> (3) 在命令行输入以下命令试着安装express（注：“-g”这个参数意思是装到global目录下，也就是上面说设置的“D:\Program Files\nodejs\node_global”里面。）</p>
+ <figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> express -g</div></pre></td></tr></table></figure>
+<p> 安装完毕后可以看到.\node_global\node_modules\express 已经有内容</p>
+<p> (4) 在命令行输入node进入编辑模式，输入以下代码测试是否能正常加载模块：</p>
+ <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">require</span><span class="params">(<span class="string">'express'</span>)</span></span></div></pre></td></tr></table></figure>
+<p> 假设成功，可以看到有输出。假设出错，检查NODE_PATH的路径。</p>
+</li>
+</ol>
 <h3 id="安装淘宝npm（cnpm）"><a href="#安装淘宝npm（cnpm）" class="headerlink" title="安装淘宝npm（cnpm）"></a>安装淘宝npm（cnpm）</h3><ol>
 <li>输入以下命令</li>
 </ol>
